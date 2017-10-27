@@ -16,3 +16,6 @@ require:
     //umount
     umount /mnt/img
     qemu-nbd -d /dev/ndb0
+
+4.run ubuntu img
+    qemu-system-x86_64 -m 3000 -hda ubuntu.img -nographic -net user,hostfwd=tcp::99522-:22 -net nic
